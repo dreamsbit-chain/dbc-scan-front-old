@@ -1,0 +1,41 @@
+@import "../../styles/variables.scss";
+
+.head {
+  padding-bottom: 16px;
+  border-bottom: 1px solid $border;
+  font-size: 18px;
+
+  @media (max-width: $breakpoint) {
+    padding-bottom: 10px;
+    font-size: 12px;
+  }
+}
+
+.body {
+  padding: 18px 0 22px;
+  font-size: 16px;
+
+  @media (max-width: $breakpoint) {
+    padding: 13px 0 17px;
+    font-size: 12px;
+  }
+}
+.item {
+  display: flex;
+  align-items: flex-start;
+  line-height: 22px;
+}
+
+.key {
+  width: 180px;
+  margin-right: $gutter;
+
+  font-weight: 700;
+  @media (max-width: $breakpoint) {
+    width: 60px;
+  }
+}
+
+.value {
+  flex: 1;
+}

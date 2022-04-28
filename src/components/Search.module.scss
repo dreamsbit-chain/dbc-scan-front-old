@@ -1,0 +1,105 @@
+@import "../styles/variables.scss";
+
+@mixin placeholder {
+  color: rgba(255, 255, 255, 0.6);
+  @media (max-width: $breakpoint) {
+    color: rgba(32, 67, 181, 0.3);
+  }
+}
+
+input::placeholder {
+  @include placeholder();
+}
+input::-webkit-input-placeholder {
+  @include placeholder();
+}
+input:-moz-placeholder {
+  @include placeholder();
+}
+input::-moz-placeholder {
+  @include placeholder();
+}
+input:-ms-input-placeholder {
+  @include placeholder();
+}
+
+input[type="search"]::-webkit-search-cancel-button {
+  display: none;
+  @media (max-width: $breakpoint) {
+    display: inline;
+  }
+}
+
+input[type="search"] {
+  -webkit-appearance: none;
+}
+
+input[type="search"]::-webkit-search-decoration,
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-results-button,
+input[type="search"]::-webkit-search-results-decoration {
+  -webkit-appearance: none;
+}
+
+input {
+  width: 100%;
+  border: 0px;
+  border: 1px solid #ffffff;
+  font-size: 12px;
+  height: 36px;
+  background: transparent;
+  padding-left: 16px;
+  padding-right: 34px;
+  border-radius: 5px;
+  word-break: normal;
+  @media (max-width: $breakpoint) {
+    padding-left: 14px;
+    padding-right: 30px;
+    height: 30px;
+  }
+
+  .secondary & {
+    border-color: $border;
+  }
+}
+
+.button {
+  position: absolute;
+  right: 14px;
+  top: 0;
+  height: 100%;
+  width: 16px;
+
+  display: flex;
+  align-items: center;
+
+  outline: 0;
+  cursor: pointer;
+  margin: 0;
+
+  @media (max-width: $breakpoint) {
+    right: 10px;
+    width: 14px;
+  }
+}
+
+form {
+  display: inline-flex;
+  @media (max-width: $breakpoint) {
+    top: 54px;
+    right: 0;
+    padding: 0;
+    width: 100%;
+    padding: 0 16px;
+    max-width: none;
+  }
+}
+
+.group {
+  position: relative;
+  width: 100%;
+  color: #fff;
+  &.secondary {
+    color: $grey;
+  }
+}

@@ -1,0 +1,76 @@
+@import "../../styles/mixins";
+@import "../../styles/variables";
+
+.card {
+  @include flex();
+
+  height: 60px;
+  border: 1px solid $border;
+  border-radius: $radius;
+  padding: 0 $gutter-small;
+
+  .article {
+    flex: 1;
+  }
+
+  .button {
+    flex: none;
+  }
+}
+
+.card + .card {
+  margin-top: $gutter-small;
+}
+
+.article {
+  white-space: nowrap;
+}
+
+.header {
+  @include flex(space-between);
+}
+
+.denom {
+  @include flex(center);
+  font-size: 16px;
+  font-weight: 700;
+  @media (max-width: $breakpoint) {
+    font-size: 14px;
+  }
+}
+
+.action {
+  @include flex(center, flex-end);
+  flex-direction: column;
+}
+
+.amount {
+  font-size: 16px;
+  @media (max-width: $breakpoint) {
+    font-size: 14px;
+  }
+}
+
+.button button {
+  @media (max-width: $breakpoint) {
+    margin-left: 5px;
+    min-width: unset;
+  }
+
+  @media (min-width: $breakpoint) {
+    margin-left: 25px;
+  }
+}
+
+.token_wrapper {
+  display: flex;
+}
+
+.currency {
+  font-size: 14px;
+  color: $grey;
+}
+
+.equal {
+  vertical-align: text-top;
+}

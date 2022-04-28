@@ -1,0 +1,30 @@
+@import "../styles/mixins";
+@import "../styles/variables";
+
+.component {
+  @include flex(center);
+  margin-bottom: 10px;
+  margin-top: 20px;
+
+  transition: background-color 0.2s;
+
+  a {
+    color: $blue;
+    text-decoration: none;
+  }
+
+  span {
+    color: $border;
+    cursor: default;
+  }
+}
+
+.text {
+  background: $blue;
+  color: white;
+  padding: 0 15px;
+}
+
+.icon {
+  margin-left: 10px;
+}

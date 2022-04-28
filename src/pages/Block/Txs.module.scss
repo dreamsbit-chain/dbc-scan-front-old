@@ -1,0 +1,21 @@
+.description {
+  margin-top: 20px;
+  height: 40px;
+  display: block;
+  position: relative;
+  font-size: 15px;
+}
+.tableContainer {
+  overflow-x: auto;
+  width: 100%;
+}
+.cardBody {
+  padding: 0;
+  overflow-x: auto;
+  thead th {
+    border: none;
+  }
+  tbody tr:last-child td {
+    border: none;
+  }
+}

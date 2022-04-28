@@ -1,0 +1,88 @@
+@import "../../styles/variables.scss";
+@import "../../styles/list.scss";
+
+.title {
+  margin-bottom: 15px;
+  @media (max-width: $breakpoint) {
+    margin-bottom: 8px;
+  }
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+
+  font-size: 14px;
+  @media (max-width: $breakpoint) {
+    font-size: 10px;
+  }
+}
+
+.info {
+  margin-top: 25px;
+
+  @media (max-width: $breakpoint) {
+    margin-top: 15px;
+  }
+}
+
+.type {
+  height: 20px;
+  padding: 1px 12px;
+  margin-right: 10px;
+  border-radius: 13.5px;
+  background-color: #e4e8f6;
+  line-height: 1.64;
+  font-size: 11px;
+  font-weight: 500;
+}
+
+.failedMsg {
+  display: flex;
+  padding: 18px;
+  margin-top: 15px;
+
+  border: 1px solid $red;
+  border-radius: $radius;
+  background: rgba($red, 0.1);
+
+  font-size: 14px;
+  line-height: 19px;
+  color: $red;
+  align-items: flex-start;
+
+  @media (max-width: $breakpoint) {
+    margin-top: 12px;
+    padding: 9px;
+    font-size: 10px;
+  }
+
+  > svg {
+    margin-right: 3px;
+  }
+}
+
+.icon {
+  margin-right: 5px;
+}
+
+.sideLine {
+  border-right: 1px solid #d8ddf0;
+  border-left: 1px solid #d8ddf0;
+  margin: 0 10px;
+  padding: 0 10px;
+}
+
+.txHash {
+  width: 100%;
+
+  .text {
+    max-width: calc(100% - 28px);
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    display: inline-block;
+    vertical-align: middle;
+  }
+}

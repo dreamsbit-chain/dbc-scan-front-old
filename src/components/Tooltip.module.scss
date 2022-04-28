@@ -1,0 +1,56 @@
+@import "../styles/variables";
+
+$color: rgba(black, 0.75);
+
+.container {
+  position: absolute;
+  left: 50%;
+
+  &.top {
+    top: 0;
+    transform: translate(-50%, -100%);
+  }
+
+  &.bottom {
+    bottom: 0;
+    transform: translate(-50%, 100%);
+  }
+
+  z-index: 1000;
+  min-width: 80px;
+
+  &.top:after,
+  &.bottom:before {
+    $size: 6px;
+    content: "";
+    display: block;
+    width: (2 * $size);
+    height: (2 * $size);
+    border: $size solid transparent;
+    margin: 0 auto;
+  }
+
+  &.top:after {
+    border-top-color: $color;
+  }
+
+  &.bottom:before {
+    border-bottom-color: $color;
+  }
+}
+
+.content {
+  position: relative;
+  padding: 6px 8px;
+  border-radius: 2px;
+
+  font-size: 14px;
+  white-space: pre-line;
+  color: white;
+  background: $color;
+
+  @media (max-width: $breakpoint) {
+    left: initial !important;
+    font-size: 12px;
+  }
+}

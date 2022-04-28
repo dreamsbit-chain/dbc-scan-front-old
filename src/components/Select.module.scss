@@ -1,0 +1,79 @@
+@import "../styles/variables.scss";
+
+:global {
+  :local(.select) {
+    min-width: 160px;
+    @media (max-width: $breakpoint) {
+      min-width: 86px;
+    }
+
+    .react-select__control {
+      min-height: 36px;
+      background-color: transparent;
+      border: 1px solid rgba(255, 255, 255, 0.3);
+      font-size: 12px;
+
+      @media (max-width: $breakpoint) {
+        font-size: 10px;
+        min-height: 30px;
+      }
+    }
+
+    .react-select__single-value {
+      color: #fff;
+    }
+
+    .react-select__input {
+      height: 0px;
+    }
+
+    .react-select__indicators {
+      padding-right: $gutter;
+      color: #fff;
+      @media (max-width: $breakpoint) {
+        padding-right: $gutter-small;
+      }
+    }
+
+    .react-select__indicator-separator {
+      display: none;
+    }
+
+    .react-select__menu {
+      margin-top: 3px;
+      color: #fff;
+      border-radius: 5px;
+
+      font-size: 12px;
+      @media (max-width: $breakpoint) {
+        font-size: 10px;
+      }
+    }
+
+    .react-select__menu-list {
+      background-color: #455d7d;
+      border-radius: 5px;
+    }
+
+    .react-select__option {
+      &--is-focused {
+        background-color: rgba(250, 251, 254, 0.05);
+        &:active {
+          background-color: rgba(250, 251, 254, 0.05);
+        }
+      }
+      &--is-selected {
+        background-color: rgba(250, 251, 254, 0.2);
+        &:active {
+          background-color: rgba(250, 251, 254, 0.2);
+        }
+      }
+    }
+  }
+}
+
+.indicator {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

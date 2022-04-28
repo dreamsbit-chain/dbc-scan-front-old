@@ -1,0 +1,50 @@
+/* colors */
+.text-primary {
+  color: $text;
+}
+
+.text-secondary {
+  color: $blue;
+}
+
+.text-success {
+  color: $green;
+}
+
+.text-warning {
+  color: $yellow;
+}
+
+.text-danger {
+  color: $red;
+}
+
+/* alignments */
+.text-center {
+  text-align: center;
+}
+
+.text-right {
+  text-align: right;
+}
+
+/* title */
+.title {
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 20px;
+  margin-top: 0px;
+  > span {
+    font-weight: 500;
+    font-size: 24px;
+    padding-left: 6px;
+  }
+
+  @media (max-width: $breakpoint) {
+    font-size: 16px;
+    margin-bottom: 15px;
+    > span {
+      font-size: 16px;
+    }
+  }
+}

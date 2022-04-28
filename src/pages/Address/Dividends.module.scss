@@ -1,0 +1,85 @@
+@import "../../styles/mixins.scss";
+@import "../../styles/variables.scss";
+
+.summary {
+  text-align: right;
+  margin-top: 20px;
+}
+
+.subTitle {
+  font-weight: 500;
+}
+
+.cardBody {
+  padding: 0;
+}
+
+.table {
+  display: flex;
+  @media (max-width: $breakpoint) {
+    flex-direction: column;
+  }
+}
+
+.col {
+  &:not(:last-child) {
+    flex: 1 1;
+  }
+  @media (max-width: $breakpoint) {
+    padding: 0 $gutter-small;
+  }
+}
+
+.head,
+.body {
+  @include flex(flex-start, center);
+  height: 60px;
+  padding-left: $gutter;
+
+  .col:last-child & {
+    padding-right: $gutter;
+  }
+
+  @media (max-width: $breakpoint) {
+    height: unset;
+  }
+}
+
+.head {
+  font-size: 16px;
+  font-weight: 700;
+
+  @media (max-width: $breakpoint) {
+    padding: 13px 0 9px;
+
+    font-size: 14px;
+
+    .col:not(:first-child) & {
+      border-top: 1px solid $border;
+    }
+  }
+}
+
+.body {
+  border-top: 1px solid $border;
+  font-size: 14px;
+
+  @media (max-width: $breakpoint) {
+    padding: 0 0 22px;
+    border-top: none;
+
+    font-size: 12px;
+  }
+}
+
+.commingSoon {
+  width: 100%;
+  padding: 48px 0;
+
+  font-size: 16px;
+  text-align: center;
+
+  @media (max-width: $breakpoint) {
+    font-size: 12px;
+  }
+}

@@ -1,0 +1,25 @@
+@import "../styles/variables";
+
+.content {
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 40px;
+  color: $text !important;
+  -webkit-text-size-adjust: 100%;
+
+  min-height: calc(100vh - #{$header-height});
+
+  @media (max-width: $breakpoint) {
+    padding: 16px;
+    min-height: calc(100vh - #{$header-height-mobile} - 45px);
+  }
+}
+
+.search {
+  margin-top: 15px;
+  display: none;
+  @media (max-width: $breakpoint) {
+    display: block;
+  }
+}

@@ -1,0 +1,139 @@
+@import "../../styles/variables.scss";
+
+.msgBox {
+  display: block;
+  border-radius: 5px;
+  border: 1px solid $border;
+  margin: 25px 0;
+  overflow: auto;
+  width: 100%;
+}
+
+.msgWrapper {
+  display: table;
+  table-layout: fixed;
+  width: 100%;
+  padding: $gutter;
+
+  border-bottom: 1px solid $border;
+  line-height: 1.5;
+
+  @media (max-width: $breakpoint) {
+    display: flex;
+    flex-direction: column;
+    padding: $gutter-small;
+
+    font-size: 12px;
+  }
+  .key {
+    display: table-cell;
+    font-size: 18px;
+    font-weight: 700;
+
+    @media (max-width: $breakpoint) {
+      font-size: 12px;
+      margin-bottom: 6px;
+    }
+  }
+  .key:first-child {
+    width: 200px;
+    padding-right: 20px;
+  }
+}
+
+.type {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 60p;
+  padding: $gutter;
+
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 1;
+  background-color: $table-head;
+
+  @media (max-width: $breakpoint) {
+    min-height: 55px;
+    padding: $gutter-small;
+
+    font-size: 14px;
+  }
+}
+
+.events {
+  margin-bottom: 20px;
+  @media (max-width: $breakpoint) {
+    tr,
+    th,
+    td {
+      display: block;
+    }
+    tr {
+      margin-bottom: 10px;
+    }
+  }
+}
+
+.eventType {
+  font-weight: normal;
+  font-size: 16px;
+  @media (max-width: $breakpoint) {
+    margin-top: 20px;
+    font-weight: 500;
+  }
+}
+
+.attrKey {
+  width: 155px;
+  font-weight: 500;
+}
+
+.attrValue {
+  white-space: pre-line;
+}
+
+.action {
+  display: flex;
+  flex-direction: column;
+}
+
+.details {
+}
+
+.msgType {
+  color: $primary;
+  font-size: 14px;
+  font-weight: 700;
+  padding: $gutter;
+  border-bottom: 1px solid $border;
+
+  @media (max-width: $breakpoint) {
+    padding: $gutter-small;
+    font-size: 12px;
+  }
+}
+
+.show {
+  border-bottom: 1px solid $border;
+}
+
+.button {
+  padding: $gutter;
+
+  button {
+    font-size: 16;
+    font-weight: 700;
+  }
+
+  @media (max-width: $breakpoint) {
+    padding: $gutter-small;
+    button {
+      font-size: 14px;
+    }
+  }
+}
+
+.noBorder {
+  border: none;
+}

@@ -1,0 +1,93 @@
+@import "../../styles/mixins";
+@import "../../styles/variables";
+
+.cardHeader {
+  max-height: 60px;
+
+  @media (max-width: $breakpoint) {
+    max-height: unset;
+  }
+}
+.cardBody {
+  padding: 25px 60px;
+  @media (max-width: $breakpoint) {
+    padding: 15px;
+  }
+}
+
+.header {
+  @include flex();
+
+  @media (max-width: $breakpoint) {
+    width: 100%;
+    flex-direction: column;
+    text-align: center;
+  }
+}
+
+.thumbnail {
+  flex: none;
+  border-radius: 50%;
+  background: $border;
+  margin-right: 11px;
+
+  @media (max-width: $breakpoint) {
+    margin-bottom: 14px;
+    margin-right: 0;
+  }
+}
+
+.moniker {
+  @include flex(flex-start, center);
+  font-size: 18px;
+  font-weight: 700;
+
+  @media (max-width: $breakpoint) {
+    font-size: 16px;
+  }
+
+  .status {
+    margin-left: 10px;
+  }
+}
+
+.p {
+  font-size: 13px;
+  font-weight: normal;
+  margin-top: 10px;
+}
+
+.summary {
+  display: flex;
+  flex-wrap: wrap;
+  font-size: 14px;
+
+  @media (max-width: $breakpoint) {
+    font-size: 12px;
+    article {
+      width: 100%;
+    }
+  }
+
+  h2 {
+    font-weight: bold;
+  }
+
+  .upTime {
+    flex: none;
+    width: 100%;
+  }
+
+  .percent {
+    font-size: 24px;
+    @media (max-width: $breakpoint) {
+      font-size: 18px;
+    }
+  }
+
+  hr {
+    margin-top: 5px;
+    margin-bottom: 10px;
+    max-width: 170px;
+  }
+}

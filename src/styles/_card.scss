@@ -1,0 +1,85 @@
+@use 'sass:math';
+
+$border: 1px solid $border;
+$box-shadow: fade-out(black, 0.95);
+$padding: 25px;
+$padding-small: 20px;
+
+.card {
+  background: white;
+
+  @media (max-width: $breakpoint - 1) {
+    box-shadow: 0 1px 5px 0 $box-shadow;
+    border: $border;
+    border-radius: $radius;
+
+    & & {
+      border: $border;
+      border-radius: $radius;
+    }
+  }
+
+  @media (min-width: $breakpoint) {
+    border: $border;
+    border-radius: $radius;
+    box-shadow: 0 1px 1px 0 $box-shadow;
+  }
+
+  & & {
+    box-shadow: unset;
+  }
+}
+
+.card-header {
+  @include flex(space-between);
+  min-height: 60px;
+
+  font-size: 16px;
+  font-weight: 700;
+  padding: $gutter;
+
+  background-color: $table-head;
+
+  .card-actions {
+    @include flex();
+    flex: none;
+  }
+
+  .card-small & {
+    font-size: 13px;
+  }
+
+  @media (max-width: $breakpoint) {
+    min-height: 55px;
+
+    font-size: 14px;
+    padding: $gutter-small;
+  }
+
+  &.bordered {
+    border-bottom: $border;
+  }
+}
+
+.card-body {
+  font-size: 14px;
+  padding: $gutter;
+
+  @media (max-width: $breakpoint) {
+    padding: $gutter-small;
+  }
+}
+
+.card-footer {
+  @media (max-width: $breakpoint - 1) {
+    padding: $gutter;
+  }
+
+  @media (min-width: $breakpoint) {
+    padding: $padding;
+
+    .card-small & {
+      padding: $padding-small;
+    }
+  }
+}

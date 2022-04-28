@@ -1,0 +1,44 @@
+@import "../../styles/list";
+
+.cardTitle {
+  background: $table-head;
+}
+
+.cardBodyContainer {
+  overflow-x: auto;
+
+  tbody tr:last-child td {
+    border: none;
+  }
+}
+
+.wrapper {
+  width: 200px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.amount {
+  display: flex;
+  white-space: pre;
+  flex-direction: column;
+}
+
+.cardBody {
+  padding: 0;
+}
+
+.amountOut {
+  color: $red;
+}
+
+.amountIn {
+  color: $green;
+}
+
+.icon {
+  @media (max-width: $breakpoint) {
+    width: 16px;
+    height: 16px;
+  }
+}
