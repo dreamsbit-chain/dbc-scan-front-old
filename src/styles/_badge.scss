@@ -1,0 +1,62 @@
+@use 'sass:math';
+
+.badge {
+  display: inline-block;
+  border-radius: 30px;
+  padding: 5px 15px;
+  min-width: 60px;
+
+  color: white;
+  white-space: nowrap;
+  text-align: center;
+  font-size: 12px;
+  line-height: 16px;
+  font-weight: 700;
+
+  @media (max-width: $breakpoint) {
+    font-size: 10px;
+    line-height: 14px;
+    padding: 5px 10px;
+  }
+
+  & + & {
+    margin-left: 10px;
+  }
+
+  &[class*="badge-"] {
+    color: white;
+    text-transform: capitalize;
+  }
+
+  &.badge-light {
+    background: fade-out($blue, 0.9);
+    color: fade-out($blue, 0.25);
+  }
+}
+
+.badge-primary {
+  background: $primary;
+}
+
+.badge-secondary {
+  background: $grey;
+}
+
+.badge-success {
+  background: $green;
+}
+
+.badge-warning {
+  background: $yellow;
+}
+
+.badge-danger {
+  background: $red;
+}
+
+.badge-small {
+  font-size: 10px;
+  line-height: 19px;
+  height: 19px;
+  border-radius: math.div(19px, 2);
+}

@@ -1,0 +1,29 @@
+@import "../styles/variables.scss";
+@import "../styles/mixins.scss";
+
+.wrapper {
+  @include flex();
+
+  border-radius: 50%;
+  background-color: $a-bg;
+  transition: 0.1s;
+  line-height: 22px;
+  cursor: pointer;
+  width: 22px;
+  height: 22px;
+  text-align: center;
+  margin-left: 6px;
+
+  @media (max-width: $breakpoint) {
+    width: 16px;
+    height: 16px;
+  }
+}
+
+.icon {
+  width: 15px;
+
+  @media (max-width: $breakpoint) {
+    width: 11px;
+  }
+}

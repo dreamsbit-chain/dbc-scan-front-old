@@ -1,0 +1,113 @@
+@import "../../styles/variables.scss";
+
+.container {
+  display: table;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  width: 100%;
+  height: 100%;
+  transform: translateX(-50%) translateY(-50%);
+}
+
+.background {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  min-width: 100vw;
+  min-height: 100vh;
+  width: auto;
+  height: auto;
+  z-index: -100;
+  transform: translateX(-50%) translateY(-50%);
+  background: #01040d url("../../images/background.png") no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.content {
+  display: table-cell;
+  vertical-align: middle;
+  text-align: center;
+}
+
+.logo {
+  padding-bottom: 70px;
+  > img {
+    height: 212px;
+    @media (max-width: $breakpoint) {
+      height: 135px;
+    }
+  }
+  @media (max-width: $breakpoint) {
+    padding-bottom: 40px;
+  }
+}
+
+.networks {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  padding: 0;
+  margin: 0;
+  display: block;
+
+  @media (max-width: $breakpoint) {
+    top: 15px;
+    right: 15px;
+  }
+}
+
+.search {
+  margin-bottom: -130px;
+  width: 100%;
+  max-width: 679px;
+  padding: 0 32px;
+  input {
+    font-weight: 300;
+    height: 56px;
+    @media (min-width: $breakpoint) {
+      font-size: 16px;
+    }
+  }
+
+  button {
+    width: 22px;
+    @media (max-width: $breakpoint) {
+      width: 16px;
+    }
+  }
+
+  @media (max-width: $breakpoint) {
+    display: block;
+    margin: 0 auto;
+    width: 100%;
+    input {
+      background: transparent;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.9);
+      color: #fff;
+      height: 36px;
+      font-weight: 400;
+    }
+    input::-webkit-input-placeholder {
+      color: rgba(255, 255, 255, 0.6);
+    }
+    input:-moz-placeholder {
+      color: rgba(255, 255, 255, 0.6);
+    }
+    input::-moz-placeholder {
+      color: rgba(255, 255, 255, 0.6);
+    }
+    input:-ms-input-placeholder {
+      color: rgba(255, 255, 255, 0.6);
+    }
+
+    button i {
+      font-size: 21px;
+      color: #fff;
+      width: 16px;
+    }
+  }
+}

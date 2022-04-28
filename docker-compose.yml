@@ -1,0 +1,10 @@
+version: '3'
+services:
+  explorer-ui:
+    container_name: explorer-ui
+    image: explorer-ui
+    build:
+      context: ./
+      dockerfile: Dockerfile
+    ports:
+      - '4949:80'

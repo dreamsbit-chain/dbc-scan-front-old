@@ -1,0 +1,39 @@
+@import "../../styles/variables.scss";
+@import "../../styles/list";
+
+.height {
+  & > span {
+    margin-right: 10px;
+  }
+  a {
+    position: relative;
+    width: 22px;
+    height: 22px;
+    display: inline-block;
+    color: $blue;
+    vertical-align: middle;
+    margin-top: -2px;
+    margin-right: 6px;
+    border-radius: 50%;
+    background-color: $a-bg;
+    text-align: center;
+    -webkit-transition: 0.1s;
+    transition: 0.1s;
+    i {
+      position: absolute;
+      left: 3px;
+      top: 0px;
+
+      font-size: 16px;
+      line-height: 22px;
+      color: $grey;
+    }
+  }
+}
+
+.txs {
+}
+
+.blockInfo {
+  margin-bottom: 20px;
+}

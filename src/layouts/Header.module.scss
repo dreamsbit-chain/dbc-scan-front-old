@@ -1,0 +1,63 @@
+@import "../styles/variables.scss";
+
+.header {
+  background: $pressed;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1);
+}
+
+.inner {
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 $gutter-large;
+  max-width: 1440px;
+  position: relative;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  height: $header-height;
+  @media (max-width: $breakpoint) {
+    padding: $gutter;
+    height: $header-height-mobile;
+  }
+}
+
+.logo {
+  display: inline-block;
+  @media (max-width: $breakpoint) {
+    display: block;
+    height: 45px;
+    line-height: 45px;
+    padding: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+  }
+  a {
+    display: block;
+    line-height: 1;
+  }
+  img {
+    height: 45px;
+    @media (max-width: $breakpoint) {
+      height: 27px;
+    }
+  }
+}
+
+.search {
+  width: 100%;
+  max-width: 310px;
+  margin-left: auto;
+  margin-right: 16px;
+
+  input {
+    border: 1px solid rgba(255, 255, 255, 0.3);
+  }
+
+  @media (max-width: $breakpoint) {
+    display: none;
+  }
+}

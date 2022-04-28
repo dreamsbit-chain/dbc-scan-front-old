@@ -1,0 +1,30 @@
+@import "variables.scss";
+
+.table-responsive {
+  width: 100%;
+  overflow-x: auto;
+  white-space: nowrap;
+}
+
+table {
+  border-collapse: collapse;
+}
+
+th {
+  font-size: 16px;
+  @media (max-width: $breakpoint) {
+    font-size: 14px;
+  }
+
+  thead & {
+    padding-bottom: 10px;
+  }
+}
+
+td {
+  font-size: 14px;
+
+  @media (max-width: $breakpoint) {
+    font-size: 12px;
+  }
+}
