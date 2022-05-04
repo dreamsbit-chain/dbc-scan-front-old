@@ -116,6 +116,45 @@ export const MsgBox = ({ type = "NATIVE_COIN_PAGE", detail }: Props) => {
             {` is whitelisted`}
           </span>
         );
+      case "Distribute":
+        const [disTo, dsAmount, message] = getMsgField([
+          "to",
+          "amount",
+          "message",
+        ]);
+
+        const disSymbol = DEFAULT_CRYPTO;
+
+        return (
+          <span>
+            {` distribute ${format.amount(dsAmount, 2)} ${denomFormatter(
+              disSymbol || "",
+            )} to `}
+            <Finder q="address" v={disTo}>
+              {format.truncate(disTo, [6, 6])}
+            </Finder>
+          </span>
+        );
+      case "MintForCustody":
+        const [mintAmount] = getMsgField(["amount"]);
+        const mintSymbol = DEFAULT_CRYPTO;
+
+        return (
+          <span>
+            {` mint ${format.amount(mintAmount, 2)} ${denomFormatter(
+              mintSymbol || "",
+            )} to (CustodyContract) `}
+            <Finder
+              q="address"
+              v={"0x0000000000000000000000000000000000007203"}
+            >
+              {format.truncate(
+                "0x0000000000000000000000000000000000007203",
+                [6, 6],
+              )}
+            </Finder>
+          </span>
+        );
 
       default:
         return <span>{detail.transactionType}</span>;
